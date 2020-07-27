@@ -1,10 +1,10 @@
 {
-  "name": "SITENAME",
-  "description": "Site Description",
+  "name": "AICTE",
+  "description": "AICTE Internship Enterprise Portal - Learning by doing. 1 Crore Internships by 2025",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "siteURL"
+    "url": "https://github.com/kesavanv/aicte.git"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",

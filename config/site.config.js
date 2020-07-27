@@ -9,13 +9,13 @@ if (!ROOT) {
 
 const config = {
   // Your website's name, used for favicon meta tags
-  site_name: 'sitename',
+  site_name: 'AICTE',
 
   // Your website's description, used for favicon meta tags
-  site_description: 'site_description',
+  site_description: 'AICTE Internship Enterprise Portal - Learning by doing. 1 Crore Internships by 2025',
 
   // Your website's URL, used for sitemap
-  site_url: 'siteurl',
+  site_url: 'https://internship.aicte-india.org/',
 
   // Google Analytics tracking ID (leave blank to disable)
   googleAnalyticsUA: '',
