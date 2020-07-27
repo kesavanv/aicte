@@ -1,0 +1,88 @@
+main .width-auto {
+  width: auto;
+  min-width: initial;
+  max-width: initial;
+}
+
+.spinner {
+  @extend %spinner;
+}
+
+.loading {
+  position: relative;
+
+  &:before {
+    @extend %loader;
+    @extend %spinner;
+
+    content: '';
+  }
+
+  * {
+    visibility: hidden;
+  }
+}
+
+// misc
+.visible-xs {
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(xs) {
+    display: none;
+  }
+}
+
+.hidden-xs,
+.hidden-xs.collapse:not(.show) {
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xs) {
+    display: block;
+  }
+}
+
+.visible-sm {
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+
+.hidden-sm,
+.hidden-sm.collapse:not(.show) {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.visible-md {
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.hidden-md,
+.hidden-md.collapse:not(.show) {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}

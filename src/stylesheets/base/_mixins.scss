@@ -1,0 +1,113 @@
+@import "../../../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+@import "../../../node_modules/bootstrap/scss/mixins/_gradients.scss";
+@import "../../../node_modules/bootstrap/scss/mixins/box-shadow.scss";
+
+/* -------------------------------------------------------------------------- */
+
+// Breakpoint viewport sizes and media queries.
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//  (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@include media-breakpoint-up($name: 'minimum width', $breakpoints: $grid-breakpoints);
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@include media-breakpoint-down($name: 'maximum width', $breakpoints: $grid-breakpoints);
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@include media-breakpoint-between($lower: 'min', $upper: 'max', $breakpoints: $grid-breakpoints);
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@include media-breakpoint-only($name: 'smallest width', $breakpoints: $grid-breakpoints);
+
+// Example usage
+
+/*
+.some-class {
+  @include media-breakpoint-up(sm) {
+    // Larger than sm: 480px
+    display: inline;
+  }
+  @include media-breakpoint-down(md) {
+    // Smaller than md: 768px
+    display: block;
+  }
+}
+*/
+
+/* -------------------------------------------------------------------------- */
+@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+
+  @else if $fallback-border-radius !=false {
+    border-radius: $fallback-border-radius;
+  }
+}
+
+@mixin box($x, $y) {
+  width: $x;
+  height: $y;
+}
+
+@mixin absolute-tl($t, $l) {
+  position: absolute;
+  top: $t;
+  left: $l;
+}
+
+@mixin absolute-tr($t, $r) {
+  position: absolute;
+  top: $t;
+  right: $r;
+}
+
+@mixin absolute-br($b, $r) {
+  position: absolute;
+  bottom: $b;
+  right: $r;
+}
+
+@mixin absolute-bl($b, $l) {
+  position: absolute;
+  bottom: $b;
+  left: $l;
+}
+
+@mixin box-shadow($color: 'rgba($black, 0.075)') {
+  box-shadow: 0 0 0.3rem $color;
+}
+
+@mixin box-shadow-custom($values) {
+  box-shadow: $values;
+}
+
+@mixin arrow-down-custom($color:#f00, $size-l: 20px, $size-r: 20px, $size-t: 20px) {
+  width: 0;
+  height: 0;
+  border-left: $size-l solid transparent;
+  border-right: $size-r solid transparent;
+  border-top: $size-t solid $color;
+}
+
+@mixin arrow-down($color:#f00 ,$size: 20px) {
+  @include arrow-down-custom($color, $size, $size, $size);
+}
+
+@keyframes hyre-spinner {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  100% {
+    transform: rotate(1800deg);
+  }
+}

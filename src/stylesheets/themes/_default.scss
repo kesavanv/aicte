@@ -1,0 +1,34 @@
+// color system
+$body-bg: #fff;
+
+$guvigreen: #09e176;
+$primary-color: #38d996;
+$secondary-color: #6249f7;
+$third-color: #1d3b70;
+$fourth-color: #5a7097;
+$fifth-color: #c1c9d8;
+$sixth-color: #eaedf2;
+
+$danger: #fc949b !default;
+$success: #09e176 !default;
+
+$custom-main-bg: #eef1f8;
+$disabled-color: #6c757d;
+$inprogress-color: #ffe600;
+$yiq-text-dark: #23334f !default;
+$card-divider-color: #eaedf2;
+$badge-color: rgba($color: $fourth-color, $alpha: 0.7);
+
+$dull-white: #fafafa;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "danger": $danger,
+  "success": $primary-color,
+);
+
+$link-color:  #272d3b;
+
+$live-event-color: #6a4c93;
+$async-event-color: #1982c4;

@@ -1,0 +1,23 @@
+%loader {
+  background: transparent;
+  // background: transparent url('../images/loader.png') no-repeat 0 0;
+}
+
+%spinner {
+  @include box(50px, 50px);
+  @include absolute-tl(10%, 50%);
+
+  border: none;
+  animation: hyre-spinner 1.2s infinite;
+  transform: translateY(-10%);
+  transform: translateX(-50%);
+}
+
+%list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+%font-fa {
+  font-family: 'Font Awesome 5 Pro', sans-serif;
+}

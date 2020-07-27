@@ -1,0 +1,20 @@
+@import 'base/_custom.scss';
+
+/* Vendors */
+@import '../vendors/font-awesome/scss/fontawesome.scss';
+@import '../vendors/font-awesome/scss/solid.scss';
+@import '../vendors/font-awesome/scss/light.scss';
+@import '../vendors/font-awesome/scss/duotone.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+
+/* Custom */
+
+/* BASE - Base styles, variables, mixins etc */
+@import 'base/_mixins.scss';
+@import 'base/_placeholders.scss';
+@import 'base/_base.scss';
+@import 'base/_utilities.scss';
+@import 'base/_layout.scss';
+@import 'base/_components.scss';
+
+/* Views */
