@@ -3,5 +3,5 @@ import 'popper.js';
 import 'bootstrap';
 
 $(document).ready(() => {
-  //init()
+  // init()
 });
