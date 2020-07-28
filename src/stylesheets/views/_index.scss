@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 5rem 0.5rem 2rem;
+  margin: 5rem 0 2rem;
   padding-bottom: 20rem;
 
   .banner-text {
@@ -42,6 +42,7 @@
 
   .search-wrap {
     position: relative;
+    margin: 0 auto;
 
     .related-actions {
       @include absolute-tr(50%, 3.5rem);
@@ -74,6 +75,207 @@
   }
 }
 
+.section-caption {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+
+  p {
+    font-size: $font-size-sm;
+    color: $gray-600;
+  }
+}
+
+.category-section {
+  margin: 0 0 5rem;
+
+  .section-caption {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+
+    p {
+      font-size: $font-size-sm;
+      color: $gray-600;
+    }
+  }
+
+  .category-tab {
+    margin: 0 auto;
+
+    .nav-link {
+      &:before {
+        @extend %font-fa;
+
+        color: $primary-color;
+        font-weight: 300;
+        padding: 0.2rem;
+      }
+
+      &.category-urban:before {
+        content: '\f64f';
+      }
+
+      &.category-industry-probs:before {
+        content: '\f12e';
+      }
+
+      &.category-certificate:before {
+        content: '\f336';
+      }
+
+      &.category-find-industry:before {
+        content: '\f3b3';
+      }
+
+      &.category-nhai:before {
+        content: '\f018';
+      }
+
+      &.category-corporate:before {
+        content: '\f1ad';
+      }
+    }
+  }
+
+  .category-tab-content {
+    h3 {
+      text-align: center;
+      padding: 1rem 0.5rem 0;
+    }
+
+    .search-section {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.promotion-section {
+  margin: 0 0 3rem;
+
+  .section-caption {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+
+  .highlight-container {
+    background-color: $primary-color;
+  }
+
+  .motivation-hightlight {
+    @extend %outer-container;
+
+    color: $white;
+    padding: 3rem 2rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.numbers-section {
+  margin: 0 0 5rem;
+
+  .highlighted-numbers {
+    @extend %list-unstyled;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 0 2rem;
+
+    li {
+      display: flex;
+      margin: 1rem;
+
+      i {
+        width: 6rem;
+        padding: 1rem 0;
+        text-align: center;
+
+        &:before {
+          font-size: 3rem;
+          margin: 1rem;
+          color: $secondary-color;
+        }
+      }
+
+      span {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.affiliations-section {
+  margin: 0 0 5rem;
+
+  .section-caption {
+    text-align: center;
+    margin: 0 auto 2rem;
+
+    h2 {
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 0.5rem;
+      margin: 0 1rem 0.5rem;
+    }
+  }
+
+  .affliations-list {
+    @extend %list-unstyled;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 0.15rem;
+    }
+  }
+}
+
+.trust-section {
+  margin: 0 0 5rem;
+
+  .section-caption {
+    text-align: center;
+    margin: 0 auto 2rem;
+
+    h2 {
+      border-bottom: 2px solid $primary-color;
+      padding-bottom: 0.5rem;
+      margin: 0 1rem 0.5rem;
+    }
+  }
+
+  .companies-carousel-wrap {
+    text-align: center;
+
+    .carousel {
+      max-width: $section-max-width;
+    }
+  }
+}
+
+.testimonial-section {
+  margin: 0 0 5rem;
+}
+
+.feedback-item {
+  display: flex;
+
+  img {
+    @include border-radius(50%);
+  }
+}
+
 @include media-breakpoint-up(sm) {
   .main-banner {
     background-position-y: 19rem;
@@ -82,6 +284,63 @@
   .search-section {
     .btn-group {
       margin: 0 4rem;
+    }
+
+    .search-wrap {
+      max-width: $section-max-width;
+    }
+  }
+
+  .category-section {
+    .category-tab {
+      max-width: $section-max-width;
+    }
+  }
+
+  .promotion-section .motivation-hightlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      white-space: nowrap;
+      padding: 0 2rem;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 1rem 0 2rem;
+      border-left: 1px solid $white;
+      text-align: left;
+    }
+  }
+
+  .numbers-section .highlighted-numbers {
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 2rem;
+
+      span {
+        text-align: center;
+      }
+    }
+  }
+
+  .affiliations-section .affliations-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@include media-breakpoint-up(ml) {
+  .category-section {
+    .category-tab-content h3 {
+      display: none;
     }
   }
 }

@@ -19,3 +19,7 @@ $theme-colors: (
 
 $link-color: $secondary-color;
 $icon-bg: $theme-gray;
+
+$carousel-control-color:             $secondary-color !default;
+$carousel-indicator-active-bg:       $secondary-color !default;
+$carousel-caption-color:             $secondary-color !default;
