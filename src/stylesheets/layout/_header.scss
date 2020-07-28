@@ -1,1 +1,163 @@
-// header
+header {
+  .navbar {
+    display: inherit;
+    padding: 0;
+
+    ul {
+      @extend %list-unstyled;
+
+      .navbar-brand {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .brands-wrap {
+    @extend %outer-container;
+
+    margin: 0 auto;
+
+    .brands {
+      @extend %list-unstyled;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        &:first-child,
+        &:nth-child(2) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .header-links-wrap {
+    background-color: $secondary-color;
+
+    .header-links {
+      @extend %outer-container;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      justify-content: flex-end;
+      padding: 1rem;
+
+      li {
+        &:first-child {
+          width: 100%;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 1rem;
+        }
+
+        &.login-link {
+          margin-left: auto;
+        }
+      }
+
+      a {
+        color: $white;
+
+        &.dropdown-item {
+          color: inherit;
+        }
+      }
+
+      .signup-link {
+        @include border-radius(1.5rem);
+
+        color: $white;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      .switch-language.dropdown {
+        .themed-icon.translate:after {
+          color: $white;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  @extend %main-sprite;
+
+  height: 3rem;
+  width: 14rem;
+  background-position-x: -10px;
+
+  &.aicte-internships {
+    background-position-y: 10px;
+  }
+
+  &.aicte {
+    background-position-y: -45px;
+  }
+
+  &.mhrd {
+    background-position-y: -95px;
+    width: 8rem;
+  }
+
+  &.goi {
+    background-position-y: -145px;
+    width: 9rem;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  header {
+    .brands-wrap {
+      padding: 1rem 0;
+
+      .brands li {
+        &:first-child {
+          padding: 0 2rem;
+          text-align: left;
+        }
+  
+        &:nth-child(2) {
+          width: auto;
+          margin-left: auto;
+        }
+      }
+    }
+
+    .header-links-wrap .header-links {
+      li {
+        &:first-child {
+          width: auto;
+          margin-bottom: 0;
+          padding: 0;
+          border: none;
+        }
+
+        &.login-link {
+          margin-left: 0;
+        }
+
+        &.post-internship-link {
+          margin-left: auto;
+          border-right: 1px solid $white;
+          padding-right: 1rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(ml) {
+  header .brands-wrap .brands li:first-child {
+    width: auto;
+  }
+}

@@ -5,3 +5,9 @@ body {
 p {
   font-size: $font-size-base;
 }
+
+// z-index of all elements
+
+.search-wrap .related-actions {
+  z-index: 3;
+}

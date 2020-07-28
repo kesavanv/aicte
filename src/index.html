@@ -3,16 +3,39 @@ ${require('./partials/common/top.html')}
 <main role="main" class="container-fluid">
   ${require('./partials/common/header/header.html')}
 
-  <div class="wrapper">
-    ${require('./partials/common/sidebar.html')}
+  <div class="main-container">
+    <div class="row">
+      <div class="col">
 
-    <div class="main-container">
-      <div class="row">
-        <div class="col">
+        <div class="main-banner">
+          <div class="banner-text">
+            <h1>Find Your Dream <strong>Internship</strong> Here</h1>
+            <p>Trusted by over 170+ companies, this is the perfect platform for students to become job creators from job seekers.</p>
+          </div>
 
-          Main
-    
+          <div class="search-section">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-outline-primary active">
+                <input type="radio" name="options" id="option1" checked> Find Intership
+              </label>
+              <label class="btn btn-outline-primary">
+                <input type="radio" name="options" id="option2"> Hire Intern
+              </label>
+            </div>
+
+            <div class="input-group search-wrap">
+              <input type="text" class="form-control" placeholder="Eg. Engineer, Pune, Android Developer" aria-label="Eg. Engineer, Pune, Android Developer" aria-describedby="search-internship">
+              <div class="input-group-append">
+                <span class="input-group-text bg-primary" id="search-internship"><button class="btn search-btn"><i class="fal fa-search"></i><span class="sr-only">Search</span></button></span>
+              </div>
+              <span class="related-actions">
+                <a role="button" title="say"><i class="fal fa-microphone"></i></a>
+              </span>
+            </div>
+          </div>
         </div>
+
+  
       </div>
     </div>
   </div>

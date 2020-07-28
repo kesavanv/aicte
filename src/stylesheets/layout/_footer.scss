@@ -1,1 +1,41 @@
-// footer
+footer {
+  background-color: $link-color;
+}
+.main-footer {
+  @extend %outer-container;
+  
+  color: $white;
+  font-size: $font-size-xs;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  a {
+    color: $white;
+    padding: 0.1rem 0;
+    display: inline-block;
+  }
+
+  .section {
+    margin: 1rem;
+  }
+
+  ul {
+    @extend %list-unstyled;
+  }
+
+  .social ul {
+    display: flex;
+
+    li {
+      margin: 1rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .main-footer {
+    flex-direction: row;
+  }
+}

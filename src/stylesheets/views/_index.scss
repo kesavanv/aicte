@@ -1,0 +1,87 @@
+.main-banner {
+  @extend %artwork;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5rem 0.5rem 2rem;
+  padding-bottom: 20rem;
+
+  .banner-text {
+    text-align: center;
+    max-width: 40rem;
+
+    h1 strong {
+      color: $primary-color;
+    }
+
+    p {
+      font-size: $font-size-sm;
+      color: $gray-600;
+    }
+  }
+}
+
+.search-section {
+  margin: 3rem 1rem 4rem;
+  text-align: center;
+
+  .btn-group {
+    .btn {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-width: 0;
+      padding: 0.7rem 2rem;
+
+      &.active {
+        color: $white;
+      }
+    }
+  }
+
+  .search-wrap {
+    position: relative;
+
+    .related-actions {
+      @include absolute-tr(50%, 3.5rem);
+
+      transform: translateY(-50%);
+
+      a {
+        padding: 0.75rem 1rem;
+        background-color: $white;
+      }
+    }
+
+    .form-control {
+      border-color: $primary-color;
+      padding: 1.3rem 2rem;
+    }
+
+    .input-group-text {
+      @include border-radius(0 $border-radius $border-radius 0);
+
+      padding: 0;
+      border-color: $primary-color;
+    }
+
+    .search-btn {
+      i:before {
+        color: $white;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .main-banner {
+    background-position-y: 19rem;
+  }
+
+  .search-section {
+    .btn-group {
+      margin: 0 4rem;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+$icon-size: 3.5rem;
+$icon-sm-size: 2rem;
+
+.themed-icon {
+  position: relative;
+  min-width: $icon-sm-size;
+  min-height: $icon-sm-size;
+
+  &:before,
+  &:after {
+    @extend %font-fa;
+
+    @include absolute-tl(0, 0);
+  }
+
+  &:before {
+    font-size: $icon-size;
+    line-height: $icon-size;
+    font-weight: 700;
+    color: $icon-bg;
+  }
+
+  &:after {
+    content: '\f111';
+    color: $link-color;
+    font-size: $font-size-xl;
+    padding: 0.65rem 1.1rem;
+  }
+
+  &.icon-bg {
+    min-width: $icon-size;
+    min-height: $icon-size;
+
+    &:before {
+      content: '\f111';
+    }
+
+    &:after {
+      color: white;
+    }
+  }
+
+  &.icon-xs {
+    padding: 0.5rem 0 0 2.3rem;
+
+    &:before {
+      font-size: $icon-sm-size;
+      line-height: $icon-sm-size;
+    }
+
+    &:after {
+      font-size: 1.5rem;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+
+  &.translate:after {
+    content: '\f0ac';
+  }
+
+  &.facebook:after {
+    content: '\f09a';
+  }
+
+  &.twitter:after {
+    content: '\f082';
+  }
+
+  &.instagram:after {
+    content: '\f39e';
+  }
+}
