@@ -59,7 +59,7 @@
       padding: 1.3rem 2rem;
     }
 
-    .input-group-text {
+    .input-group-append .input-group-text {
       @include border-radius(0 $border-radius $border-radius 0);
 
       padding: 0;
