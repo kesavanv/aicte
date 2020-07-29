@@ -1,4 +1,4 @@
-# Hyre
+# AICTE
 
 Go to 'gh-pages' branch to see just the static pages.
 and 'master' branch for development.
