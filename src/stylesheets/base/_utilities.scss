@@ -86,3 +86,14 @@ main .width-auto {
     display: block;
   }
 }
+
+.hidden-lg,
+.hidden-lg.collapse:not(.show) {
+  @include media-breakpoint-down(lg) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

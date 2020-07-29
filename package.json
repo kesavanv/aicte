@@ -11,7 +11,7 @@
     "email": "kesavanv@gmail.com"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --config ./config/webpack.config.js",
     "start:dist": "cross-env NODE_ENV=production webpack-dev-server --config ./config/webpack.config.js && http-server ./dist -o",
     "setup": "npm i",
     "postinstall": "SKIP_SETUP=true node ./config/site.setup.js",
@@ -71,6 +71,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "bootstrap": "^4.4.1",
     "browserslist": "^4.9.1",
     "caniuse-lite": "^1.0.30001035",

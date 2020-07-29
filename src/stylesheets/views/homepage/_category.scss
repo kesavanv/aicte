@@ -1,0 +1,89 @@
+.category-section {
+  max-width: 960px;
+  margin: 0 auto 14rem;
+
+  .category-tab {
+    margin: 0 auto;
+
+    .nav-link {
+      &:before {
+        @extend %categories-sprite;
+
+        @include box(100px, 100px);
+
+        background-position-y: -10px;
+      }
+
+      &.category-urban:before {
+        content: '';
+        background-position-x: -10px;
+      }
+
+      &.category-industry-probs:before {
+        content: '';
+        background-position-x: -160px;
+      }
+
+      &.category-certificate:before {
+        content: '';
+        background-position-x: -310px;
+      }
+
+      &.category-find-industry:before {
+        content: '';
+        background-position-x: -480px;
+      }
+
+      &.category-nhai:before {
+        content: '';
+        background-position-x: -630px;
+      }
+
+      &.category-corporate:before {
+        content: '';
+        background-position-x: -780px;
+      }
+    }
+  }
+
+  .category-tab-content {
+    h3 {
+      text-align: center;
+      padding: 1rem 0.5rem 0;
+    }
+
+    .search-section {
+      margin: 2rem auto;
+      width: 60%;
+    }
+
+    .search-btn {
+      padding: 0;
+
+      .fa-search:before {
+        color: $white;
+      }
+    }
+
+    .input-with-actions .related-actions {
+      right: 4rem;
+
+      a {
+        padding: 1rem;
+      }
+    }
+
+    .input-group-append .input-group-text {
+      padding: 0 1rem;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .category-section .category-tab-content .search-section {
+    width: 100%;
+    padding: 1rem;
+  }
+}

@@ -1,89 +1,49 @@
 header {
-  .navbar {
-    display: inherit;
-    padding: 0;
-
-    ul {
-      @extend %list-unstyled;
-
-      .navbar-brand {
-        span {
-          display: none;
-        }
-      }
+  .navbar-brand {
+    span {
+      display: none;
     }
+  }
+
+  ul {
+    @extend %list-unstyled;
   }
 
   .brands-wrap {
-    @extend %outer-container;
-
-    margin: 0 auto;
-
     .brands {
-      @extend %list-unstyled;
-
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
-      li {
-        &:first-child,
-        &:nth-child(2) {
-          width: 100%;
-          text-align: center;
-        }
-      }
     }
   }
 
-  .header-links-wrap {
-    background-color: $secondary-color;
+  .header-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 
-    .header-links {
-      @extend %outer-container;
+    li {
+      &.demo-link a,
+      &.team-link a {
+        color: $theme-gray;
+      }
 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      width: 100%;
-      justify-content: flex-end;
-      padding: 1rem;
-
-      li {
-        &:first-child {
-          width: 100%;
-          margin-bottom: 1rem;
-          border-bottom: 1px solid #fff;
-          padding-bottom: 1rem;
-        }
-
-        &.login-link {
-          margin-left: auto;
-        }
+      &.post-internship-link a {
+        font-weight: 600;
       }
 
       a {
-        color: $white;
-
-        &.dropdown-item {
-          color: inherit;
-        }
+        font-size: $font-size-sm;
+        white-space: nowrap;
       }
+    }
 
-      .signup-link {
-        @include border-radius(1.5rem);
+    .signup-link {
+      @include border-radius(1.5rem);
 
-        color: $white;
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
-      }
-
-      .switch-language.dropdown {
-        .themed-icon.translate:after {
-          color: $white;
-          padding: 0;
-        }
-      }
+      color: $white;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
     }
   }
 }
@@ -104,60 +64,46 @@ header {
   }
 
   &.mhrd {
-    background-position-y: -95px;
+    background-position-y: -90px;
     width: 8rem;
   }
 
   &.goi {
-    background-position-y: -145px;
+    background-position-y: -140px;
     width: 9rem;
   }
 }
 
-@include media-breakpoint-up(sm) {
-  header {
-    .brands-wrap {
-      padding: 1rem 0;
+.announcements {
+  margin: 1rem 2rem;
+  font-size: $font-size-xs;
 
-      .brands li {
-        &:first-child {
-          padding: 0 2rem;
-          text-align: left;
-        }
+  strong {
+    font-style: italic;
+    border-bottom: 1px solid $primary-color;
+  }
 
-        &:nth-child(2) {
-          width: auto;
-          margin-left: auto;
-        }
-      }
-    }
-
-    .header-links-wrap .header-links {
-      li {
-        &:first-child {
-          width: auto;
-          margin-bottom: 0;
-          padding: 0;
-          border: none;
-        }
-
-        &.login-link {
-          margin-left: 0;
-        }
-
-        &.post-internship-link {
-          margin-left: auto;
-          border-right: 1px solid $white;
-          padding-right: 1rem;
-          margin-right: 1rem;
-        }
-      }
-    }
+  p {
+    font-size: $font-size-sm;
   }
 }
 
-@include media-breakpoint-up(ml) {
-  header .brands-wrap .brands li:first-child {
-    width: auto;
+@include media-breakpoint-down(sm) {
+  .brands li:not(:first-child) {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  header {
+    border-bottom: 4px solid #286bda;
+
+    .brands {
+      padding: 1rem;
+    }
+
+    .header-links .language-link {
+      margin-right: 0.5rem;
+    }
   }
 }

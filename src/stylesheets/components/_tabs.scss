@@ -1,6 +1,6 @@
-.nav {
-  flex-wrap: nowrap;
-}
+// .nav {
+//   flex-wrap: nowrap;
+// }
 
 .nav-tabs {
   // border: 0;
@@ -15,15 +15,12 @@
     .nav-link.active {
       border-bottom: 3px solid $primary-color;
       background-color: transparent;
-      color: $secondary-color;
-
-      .topic-count {
-        background-color: $secondary-color;
-      }
+      color: $black;
     }
 
     .nav-link {
       border: 0;
+      border-bottom: 3px solid transparent;
       padding: 0 0 0.5rem 0;
       color: #95a4c2;
       font-size: $font-size-sm;
@@ -81,7 +78,26 @@
 }
 
 @include media-breakpoint-down(lg) {
-  .nav {
-    overflow-x: scroll;
+  .nav-tabs {
+    border: none;
+
+    .nav-item.show .nav-link,
+    .nav-item .nav-link {
+      &.active {
+        border: none;
+
+        &:before {
+          @include border-radius(0.5rem);
+
+          // border: 2px solid $primary-color;
+          filter: grayscale(0);
+        }
+      }
+
+      &:before {
+        // border: 2px solid transparent;
+        filter: grayscale(1);
+      }
+    }
   }
 }

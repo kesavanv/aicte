@@ -1,0 +1,44 @@
+.promotion-section {
+  margin: 0 0 6rem;
+
+  .section-caption h2:after {
+    display: none;
+  }
+
+  .highlight-container {
+    background-color: $primary-color;
+  }
+
+  .motivation-hightlight {
+    max-width: 960px;
+    margin: 0 auto;
+    color: $white;
+    padding: 3rem 2rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .promotion-section .motivation-hightlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      white-space: nowrap;
+      padding: 0.5rem 2rem;
+      margin: 0;
+      border-right: 1px solid rgba($white, 0.5);
+    }
+
+    p {
+      margin: 0;
+      padding: 0 1rem 0 2rem;
+      text-align: left;
+    }
+  }
+}

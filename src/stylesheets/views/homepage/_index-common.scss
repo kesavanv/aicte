@@ -1,0 +1,29 @@
+.section-caption {
+  text-align: center;
+  margin: 0 auto 2rem;
+
+  h2 {
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin: 0 1rem 0.5rem;
+
+    &:after {
+      @include absolute-bl(0, 50%);
+      @include box(100%, 2px);
+
+      transform: translateX(-50%);
+      content: '';
+      max-width: 30rem;
+      background-color: $primary-color;
+    }
+
+    .highlight {
+      font-style: italic;
+    }
+  }
+
+  p {
+    font-size: $font-size-sm;
+    color: $gray-600;
+  }
+}

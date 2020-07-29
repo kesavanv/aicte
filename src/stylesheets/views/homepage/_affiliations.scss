@@ -1,0 +1,65 @@
+.affiliations-section {
+  margin: 0 0 15rem;
+
+  .affiliations-carousel-wrap {
+    text-align: center;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      @include custom-carousel-control();
+    }
+  }
+
+  .affliations-list {
+    @extend %list-unstyled;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      @include border-radius($border-radius);
+
+      padding: 1rem 1.5rem;
+      border: 1px solid $border-color;
+      margin: 1rem;
+
+      &:before {
+        @extend %affiliations-sprite;
+
+        @include box(100px, 100px);
+
+        content: '';
+        display: inline-block;
+        background-position-y: -28px;
+      }
+
+      &.goi:before {
+        background-position-x: -26px;
+      }
+
+      &.mhrd:before {
+        background-position-x: -223px;
+      }
+
+      &.tulip:before {
+        background-position-x: -426px;
+      }
+
+      &.aicte:before {
+        background-position-x: -623px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .affiliations-section .affliations-list li {
+    margin: 0.1rem;
+  }
+}

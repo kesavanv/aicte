@@ -1,0 +1,70 @@
+.trust-section {
+  margin: 0 0 10rem;
+
+  .companies-carousel-wrap {
+    text-align: center;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      @include custom-carousel-control();
+    }
+  }
+
+  .trust-companies-list {
+    @extend %list-unstyled;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      @include border-radius($border-radius);
+
+      padding: 1rem 1.5rem;
+      border: 1px solid $border-color;
+      margin: 1rem;
+
+      &:before {
+        @extend %companies-sprite;
+
+        @include box(250px, 100px);
+
+        content: '';
+        display: inline-block;
+        background-position-y: 3px;
+      }
+
+      &.techmahindra:before {
+        background-position-x: -11px;
+      }
+
+      &.robinhood:before {
+        background-position-x: -293px;
+        width: 220px;
+      }
+
+      &.upcase:before {
+        background-position-x: -590px;
+        width: 190px;
+      }
+
+      &.hubspot:before {
+        background-position-x: -820px;
+        width: 190px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .trust-section .trust-companies-list {
+    li:not(:first-of-type) {
+      display: none;
+    }
+  }
+}

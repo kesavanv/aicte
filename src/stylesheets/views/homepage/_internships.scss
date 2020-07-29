@@ -1,0 +1,97 @@
+.internships-section {
+  margin: 0 0 15rem;
+
+  .internships-carousel-wrap {
+    @include big-screen-only();
+
+    text-align: center;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      @include custom-carousel-control();
+    }
+  }
+
+  .internships-list {
+    &.small-screen-only {
+      @include small-screen-only('flex');
+    }
+
+    @extend %list-unstyled;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    li a {
+      @include border-radius($border-radius);
+
+      padding: 1rem 1.5rem;
+      border: 1px solid $border-color;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:before {
+        @extend %internships-sprite;
+
+        @include box(100px, 100px);
+
+        content: '';
+        display: inline-block;
+        background-position-y: -13px;
+      }
+
+      &.wfh:before {
+        background-position-x: -20px;
+      }
+
+      &.delhi:before {
+        background-position-x: -192px;
+      }
+
+      &.karnataka:before {
+        background-position-x: -360px;
+        width: 120px;
+      }
+
+      &.madhyapradesh:before {
+        background-position-x: -532px;
+        width: 120px;
+      }
+
+      &.telangana:before {
+        background-position-x: -725px;
+        width: 80px;
+      }
+
+      &.tamilnadu:before {
+        background-position-x: -883px;
+        width: 110px;
+      }
+
+      &.wbengal:before {
+        background-position-x: -1070px;
+        width: 80px;
+      }
+    }
+  }
+
+  .scroll-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+    span {
+      font-size: $font-size-sm;
+    }
+
+    i {
+      font-size: $font-size-xxl;
+      color: $theme-gray;
+    }
+  }
+}

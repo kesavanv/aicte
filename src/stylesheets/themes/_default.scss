@@ -9,17 +9,23 @@ $success: #09e176 !default;
 
 $disabled-color: #6c757d;
 $theme-gray:#707070;
+$medium: #ccc !default;
+$light: #e8e8e8 !default;
 
 $theme-colors: (
   "primary": $primary-color,
   "secondary": $secondary-color,
   "danger": $danger,
   "success": $success,
+  "light": $light,
+  "medium": $medium,
 );
 
 $link-color: $secondary-color;
 $icon-bg: $theme-gray;
 
-$carousel-control-color:             $secondary-color !default;
+$carousel-control-color:             #fff !default;
 $carousel-indicator-active-bg:       $secondary-color !default;
 $carousel-caption-color:             $secondary-color !default;
+
+$input-border-color: $primary-color !default;

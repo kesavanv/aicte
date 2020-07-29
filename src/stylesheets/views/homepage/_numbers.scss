@@ -1,0 +1,77 @@
+.numbers-section {
+  margin: 0 0 11rem;
+
+  .highlighted-numbers {
+    @extend %list-unstyled;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 0 0 2rem;
+
+    li {
+      display: flex;
+      margin: 1rem;
+
+      &:before {
+        @extend %numbers-sprite;
+
+        @include box(100px, 100px);
+
+        content: '';
+        background-position-y: -8px;
+      }
+
+      &.total-internships:before {
+        background-position-x: -16px;
+      }
+
+      &.total-companies:before {
+        background-position-x: -297px;
+      }
+
+      &.internship-goal:before {
+        background-position-x: -573px;
+      }
+
+      span {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        strong {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .numbers-section .highlighted-numbers {
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .numbers-section .highlighted-numbers {
+    li {
+      margin: 1rem 2rem;
+
+      span {
+        text-align: center;
+        font-size: 1.5rem;
+
+        strong {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

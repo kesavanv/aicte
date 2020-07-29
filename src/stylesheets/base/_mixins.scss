@@ -111,3 +111,30 @@
     transform: rotate(1800deg);
   }
 }
+
+@mixin custom-carousel-control($color: $secondary-color) {
+  background-color: $color;
+  border: 0.5rem solid $color;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+@mixin big-screen-only($display: 'block') {
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: $display;
+  }
+}
+
+@mixin small-screen-only($display: 'block') {
+  @include media-breakpoint-down(lg) {
+    display: $display;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}

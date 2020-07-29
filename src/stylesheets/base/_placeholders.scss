@@ -1,9 +1,25 @@
 %main-sprite {
-  background: transparent url('../images/sprite.png') no-repeat 0 0;
+  background: transparent url('../images/sprite-aicte-logos.png') no-repeat 0 0;
 }
 
-%artwork {
-  background: transparent url('../images/artwork.png') no-repeat center 22rem;
+%categories-sprite {
+  background: transparent url('../images/sprite-categories.png') no-repeat 0 0;
+}
+
+%numbers-sprite {
+  background: transparent url('../images/sprite-numbers.png') no-repeat 0 0;
+}
+
+%affiliations-sprite {
+  background: transparent url('../images/sprite-affiliations.png') no-repeat 0 0;
+}
+
+%internships-sprite {
+  background: transparent url('../images/sprite-internships.png') no-repeat 0 0;
+}
+
+%companies-sprite {
+  background: transparent url('../images/sprite-companies.png') no-repeat 0 0;
 }
 
 %outer-container {

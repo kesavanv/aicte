@@ -1,0 +1,53 @@
+.subscription-section {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 2rem;
+  background-color: rgba($light, 0.5);
+
+  .section-content {
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: $font-size-base;
+  }
+
+  .student-announcements {
+    @extend %list-unstyled;
+
+    margin: 0 3rem 3rem 0;
+
+    li {
+      font-size: $font-size-xs;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .input-group {
+    max-width: 40rem;
+
+    .form-control {
+      border-color: transparent;
+      color: $theme-gray;
+    }
+
+    .input-group-append {
+      i {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .input-group-text {
+      background-color: $secondary-color;
+      color: $white;
+      border-color: transparent;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .subscription-section {
+    flex-direction: column;
+  }
+}
