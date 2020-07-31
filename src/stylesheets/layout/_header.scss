@@ -129,6 +129,10 @@ header {
 }
 
 @include media-breakpoint-down(sm) {
+  .brands-wrap {
+    margin: 0 auto;
+  }
+
   .brands li:not(:first-child) {
     display: none;
   }
