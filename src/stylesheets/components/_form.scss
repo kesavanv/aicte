@@ -5,6 +5,11 @@
 
 .btn-primary {
   color: $white;
+
+  &.visited {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+  }
 }
 
 .input-with-actions {
@@ -15,6 +20,15 @@
 
     transform: translateY(-50%);
   }
+}
+
+.form-control.simple-input {
+  @include border-radius(0);
+
+  padding: 0;
+  border-width: 0 0 1px;
+  height: auto;
+  font-size: $font-size-sm;
 }
 
 @include media-breakpoint-down(lg) {

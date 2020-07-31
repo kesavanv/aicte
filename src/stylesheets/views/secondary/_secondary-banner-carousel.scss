@@ -1,0 +1,100 @@
+.secondary-banner-carousel-wrap {
+  background-color: $secondary-color;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+
+  .carousel-inner {
+    padding: 0 1rem;
+  }
+}
+
+.intermediate-banner {
+  @include border-radius($border-radius);
+
+  background-color: $primary-color;
+  padding: 2rem 2rem 0;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .banner-image {
+    margin-right: 2rem;
+  }
+
+  h1 {
+    color: $white;
+    font-weight: 300;
+    padding-bottom: 2rem;
+
+    strong {
+      font-weight: 500;
+      display: block;
+    }
+  }
+}
+
+.secondary-banner {
+  @extend %outer-container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  .banner-image {
+    // margin-right: 2rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  div {
+    p {
+      color: $white;
+      font-size: $font-size-base;
+    }
+  }
+
+  h1 {
+    color: $white;
+    font-weight: 300;
+
+    strong {
+      font-weight: 500;
+      display: block;
+    }
+
+    small {
+      font-size: $font-size-base;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .secondary-banner-carousel-wrap {
+    padding: 0;
+  }
+
+  .intermediate-banner {
+    .banner-image {
+      display: none;
+    }
+  }
+
+  .secondary-banner {
+    flex-direction: column;
+    min-height: 29rem;
+
+    .banner-image {
+      margin-right: 0;
+    }
+
+    div {
+      padding-bottom: 2rem;
+    }
+
+    h1 {
+      margin-top: 2rem;
+    }
+  }
+}

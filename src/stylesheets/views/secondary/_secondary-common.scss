@@ -1,0 +1,83 @@
+.main-secondary-container {
+  @extend %outer-container;
+}
+
+.loader {
+  text-align: center;
+  color: $medium;
+}
+
+.card {
+  margin: 1rem;
+
+  &.highlighted {
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
+.table {
+  th {
+    border-color: transparent;
+  }
+
+  td {
+    border-color: $white;
+  }
+}
+
+.list-unstyled.list-lined {
+  li {
+    background-color: transparent;
+    border-width: 0 0 1px;
+    border-color: $white;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+}
+
+.badge {
+  font-weight: 300;
+  background-color: rgba($secondary-color, 0.1);
+  color: $secondary-color;
+  padding: 0.75rem 1.2rem;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+section {
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+@include media-breakpoint-down(sm) {
+  table {
+    thead {
+      display: none;
+    }
+
+    tr {
+      border-top: 1px solid $theme-gray;
+      border-bottom: 1px solid $medium;
+
+      &:first-of-type {
+        border-top: none;
+      }
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      display: flex;
+
+      &:before {
+        content: attr(label);
+        font-weight: bold;
+        width: 120px;
+        min-width: 120px;
+      }
+    }
+  }
+}

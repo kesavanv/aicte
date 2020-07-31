@@ -1,0 +1,130 @@
+.internships-list {
+  margin: 0 0 2rem;
+}
+
+.internship-item {
+  margin: 2rem 1rem;
+
+  .img-thumbnail {
+    margin-bottom: 1rem;
+    max-width: 6rem;
+  }
+
+  ul {
+    @extend %list-unstyled;
+  }
+
+  .job-attributes {
+    margin: 2rem 0;
+
+    li {
+      margin-bottom: 0.3rem;
+
+      &:before {
+        @extend %font-fa;
+
+        color: $primary-color;
+        display: inline-block;
+        margin-right: 0.5rem;
+        width: 2rem;
+        text-align: center;
+      }
+
+      &.wfh:before {
+        content: '\e066';
+      }
+
+      &.posted-on:before {
+        content: '\f1da';
+      }
+
+      &.location:before {
+        content: '\f3c5';
+      }
+    }
+  }
+
+  .job-supplement-attributes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    li {
+      margin-bottom: 1rem;
+      display: flex;
+
+      &:before {
+        @extend %font-fa;
+
+        color: $primary-color;
+        display: inline-block;
+        margin-right: 0.5rem;
+        width: 2rem;
+        text-align: center;
+      }
+
+      &.start-date:before {
+        content: '\f144';
+      }
+
+      &.duration:before {
+        content: '\f133';
+      }
+
+      &.stipend:before {
+        content: '\f51e';
+      }
+
+      &.apply-by:before {
+        content: '\f252';
+      }
+    }
+  }
+
+  .internship-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .btn-wrap {
+    margin: 1rem 0 0;
+    text-align: left;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .internship-item {
+    .internship-primary-info {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .job-attributes {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        margin-right: 1rem;
+      }
+    }
+
+    .job-supplement-attributes {
+      justify-content: flex-start;
+
+      li {
+        margin-right: 2rem;
+      }
+    }
+
+    .btn-wrap {
+      text-align: right;
+    }
+  }
+}
