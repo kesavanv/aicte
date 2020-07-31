@@ -114,8 +114,8 @@ const favicons = new WebappWebpackPlugin({
 const copier = new CopyPlugin({
   patterns: [
     { 
-      from: './images/profile-photos',
-      to: './images/profile-photos',
+      from: './images/photos',
+      to: './images/photos',
     },
   ],
 });
