@@ -87,6 +87,7 @@ header {
 
   &.aicte-internships {
     background-position-y: 10px;
+    width: 196px;
   }
 
   &.aicte {
@@ -131,6 +132,10 @@ header {
 @include media-breakpoint-down(sm) {
   .brands-wrap {
     margin: 0 auto;
+  }
+
+  .navbar-brand {
+    margin-right: 0;
   }
 
   .brands li:not(:first-child) {
