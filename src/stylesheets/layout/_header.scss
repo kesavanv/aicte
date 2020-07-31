@@ -119,6 +119,10 @@ header {
   }
 }
 
+.navbar-header {
+  @include absolute-tl(1.5rem, 1rem);
+}
+
 @include media-breakpoint-up(sm) {
   .navbar-header {
     display: none;
