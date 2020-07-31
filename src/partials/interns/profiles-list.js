@@ -32,7 +32,7 @@ ${intermediateBanner(count)}
   <div class="row">
     <div class="col-lg-6">
       <div class="intern">
-        <img class="img-thumbnail" src="../../images/photos/photo${getRandomInt(1, 8)}.jpg" alt="">
+        <img class="img-thumbnail" src="./images/photos/photo${getRandomInt(1, 8)}.jpg" alt="">
         <div class="intern-details">
           <h6 class="intern-name">${intern.name}</h6>
           <div class="description">
