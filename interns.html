@@ -7,41 +7,98 @@
         <meta name="description" content="" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <link rel="shortcut icon" href="/images/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"><link rel="manifest" href="/images/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="AICTE"><link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/images/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="AICTE"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="style.2e134b728573048f55bf.css" rel="stylesheet"></head>
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"><link rel="manifest" href="/images/favicons/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="AICTE"><link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/images/favicons/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/images/favicons/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="AICTE"><meta name="viewport" content="width=device-width,initial-scale=1"><link href="style.79d82d60161e86b48f5d.css" rel="stylesheet"></head>
 
     <body>
 
         <main role="main" class="container-fluid">
-            <header>
+            <header class="secondary-page">
                 <nav class="navbar navbar-light">
-                    <div class="brands-wrap">
-                        <ul class="brands">
-                            <li><a class="navbar-brand aicte-internships" href="index.html"><span>AICTE Internships</span></a></li>
-                            <li><a class="navbar-brand aicte" href="#"><span>All India Council for Technical Education</span></a></li>
-                            <li><a class="navbar-brand mhrd" href="#"><span>MHRD</span></a></li>
-                            <!-- <li><a class="navbar-brand goi" href="#"><span>Government of India</span></a></li> -->
+                    <div class="navbar-left">
+                        <button type="button" class="btn navbar-toggle collapsed" data-toggle="collapse" data-target="#languages-menu">
+                            <span class="sr-only">Switch language</span>
+                            <img src="images/icon-translate.5d54eb12502dfba5f0d87ee2290693cd.png" alt="Translate">
+                        </button>
+                    </div>
+                    <div class="navbar-middle">
+                        <div class="brands-wrap">
+                            <ul class="brands">
+                                <li><a class="navbar-brand aicte-internships" href="index.html"><span class="sr-only">AICTE Internships</span></a></li>
+                                <li><a class="navbar-brand aicte" href="#"><span class="sr-only">All India Council for Technical Education</span></a></li>
+                                <li><a class="navbar-brand mhrd" href="#"><span class="sr-only">MHRD</span></a></li>
+                                <li><a class="navbar-brand goi" href="#"><span class="sr-only">Government of India</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="navbar-right">
+                        <button type="button" id="mainMenuToggle" class="btn btn-outline-medium navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <div id="main-menu" class="header-links-wrap collapse">
+                        <ul class="header-links">
+                            <li class="demo-link"><a href="#" class="btn btn-sm btn-link">Demo</a></li>
+                            <li class="team-link"><a href="#" class="btn btn-sm btn-link">Our Team</a></li>
+                            <li class="post-internship-link"><a href="#" class="btn btn-sm btn-link">Post Internship</a></li>
+                            <li><a href="index.html" class="btn btn-sm btn-primary signup-link">Sign Out</a></li>
                         </ul>
+                    </div>
+
+                    <div id="languages-menu" class="languages-links-wrap collapse">
+                        <h5>Choose language</h5>
+
+                        <ul class="languages-links">
+                            <li class="active"><span>English</span></li>
+                            <li><span>हिंदी</span></li>
+                            <li><span>বাংলা</span></li>
+                            <li><span>ગુજરાતી</span></li>
+                            <li><span>ಕನ್ನಡ</span></li>
+                            <li><span>മലയാളം</span></li>
+                            <li><span>मराठी</span></li>
+                            <li><span>ଓଡିଆ</span></li>
+                            <li><span>ਪੰਜਾਬੀ</span></li>
+                            <li><span>தமிழ்</span></li>
+                            <li><span>తెలుగు</span></li>
+                        </ul>
+
+                        <button class="btn btn-primary collapsed" data-toggle="collapse" data-target="#languages-menu"><i class="fas fa-arrow-circle-up"></i></button>
                     </div>
 
                     <div class="header-form-wrap">
                         <button class="btn btn-link post-intership-btn">Post an Intership</button>
-                        <img class="gravatar order-sm-1" src="images/photo8.5526e3f0ebcd29aed5064bb4dae66cb7.jpg" alt="username">
+
                         <form>
                             <div class="form-row">
                                 <div class="col-sm-6">
                                     <input type="text" class="form-control simple-input" placeholder="Civil Engineer, Designer etc.">
                                 </div>
-                                <div class="col-9 col-sm-5">
+                                <div class="col-10 col-sm-5">
                                     <input type="text" class="form-control simple-input" placeholder="Mumbai">
                                 </div>
-                                <div class="col-2 col-sm-1">
+                                <div class="col col-sm-1">
                                     <button class="btn search-btn"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
                         </form>
+
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="gravatar" src="images/photo8.5526e3f0ebcd29aed5064bb4dae66cb7.jpg" alt="username">
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Demo</a>
+                                <a class="dropdown-item" href="#">Our Team</a>
+                                <!-- <a class="dropdown-item" href="#">Post Internship</a> -->
+                                <a class="dropdown-item" href="index.html">Sign Out</a>
+                            </div>
+                        </div>
                     </div>
+
                 </nav>
             </header>
+
 
             <div class="secondary-banner-carousel-wrap">
                 <div id="secondary-banner-carousel" class="carousel slide" data-ride="carousel">
@@ -104,7 +161,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo3.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo5.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Anoop Dutta</h6>
                                                 <div class="description">
@@ -144,7 +201,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo6.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo8.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Ayushmaan Kurana</h6>
                                                 <div class="description">
@@ -224,7 +281,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo6.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo8.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Neha Thakur</h6>
                                                 <div class="description">
@@ -264,7 +321,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo8.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo2.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Rohan Mathews</h6>
                                                 <div class="description">
@@ -349,7 +406,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo1.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo8.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Salman Khan</h6>
                                                 <div class="description">
@@ -469,7 +526,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo8.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo2.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Naveen Chuhan</h6>
                                                 <div class="description">
@@ -509,7 +566,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="intern">
-                                            <img class="img-thumbnail" src="./images/photos/photo5.jpg" alt="">
+                                            <img class="img-thumbnail" src="./images/photos/photo1.jpg" alt="">
                                             <div class="intern-details">
                                                 <h6 class="intern-name">Coffee Sharma</h6>
                                                 <div class="description">
@@ -610,6 +667,6 @@
                 </div>
             </footer>
         </main>
-    <script src="main.423accaa598022e7af99.js"></script></body>
+    <script src="main.07172d1df1504a4ebca8.js"></script></body>
 
 </html>
