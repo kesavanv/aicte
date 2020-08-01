@@ -1,81 +1,41 @@
 header {
-  .navbar-brand {
-    span {
-      display: none;
-    }
-  }
-
-  .navbar-toggle {
-    padding: 0.5rem 0.7rem;
-
-    i:before {
-      font-size: $font-size-xl;
-      line-height: 1.2;
-    }
-  }
-
   ul {
     @extend %list-unstyled;
   }
+}
 
-  .brands-wrap {
-    .brands {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.navbar {
+  padding: 0;
+}
+
+.navbar-left {
+  padding: 1rem;
+
+  .btn {
+    padding: 0.05rem 0.2rem;
   }
+}
 
-  .header-links {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+.navbar-right {
+  padding: 1rem;
 
-    li {
-      &.demo-link a,
-      &.team-link a {
-        color: $theme-gray;
-      }
+  .btn {
+    padding: 0.35rem 0.8rem;
 
-      &.post-internship-link a {
-        font-weight: 600;
-      }
-
-      a {
-        font-size: $font-size-sm;
-        white-space: nowrap;
-      }
-    }
-
-    .signup-link {
-      @include border-radius(1.5rem);
-
-      color: $white;
-      padding-right: 1.5rem;
-      padding-left: 1.5rem;
-    }
-  }
-
-  .header-form-wrap {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .search-btn {
-      color: $primary-color;
-      padding: 0;
+    i.fa-times {
+      padding: 0 0.12rem;
     }
   }
 }
 
-.gravatar {
-  @include border-radius(50%);
+.brands {
+  li {
+    display: none;
 
-  max-width: 2rem;
-  height: auto;
-  border: 1px solid $primary-color;
-  padding: 1px;
+    &:first-of-type {
+      display: block;
+    }
+  }
 }
 
 .navbar-brand {
@@ -105,6 +65,105 @@ header {
   }
 }
 
+.header-links-wrap,
+.languages-links-wrap {
+  width: 100%;
+  height: 100vh;
+  background-color: lighten($secondary-color, 45%);
+  border-top: 1px solid $secondary-color;
+}
+
+.header-links-wrap {
+  @include absolute-tl(5.4rem, 0);
+
+  margin-left: auto;
+
+  .header-links {
+    li {
+      padding: 1rem 0 0;
+      text-align: center;
+      border-top: 1px solid rgba($secondary-color, 0.2);
+
+      &:first-of-type {
+        border: none;
+      }
+
+      &.post-internship-link a {
+        font-weight: 600;
+      }
+    }
+
+    .signup-link {
+      @include border-radius(1.5rem);
+
+      color: $white;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.languages-links-wrap {
+  text-align: center;
+  padding: 1.5rem 0 0;
+  order: 3;
+
+  .languages-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0 1.5rem;
+
+    li {
+      padding: 0.5rem;
+
+      &.active span {
+        background-color: rgba($primary-color, 0.1);
+        color: $primary-color;
+      }
+
+      span {
+        @include border-radius($border-radius);
+
+        padding: 0.75rem 1.2rem;
+      }
+    }
+  }
+
+  .btn {
+    @include border-radius(50%);
+
+    padding: 0;
+    font-size: 3rem;
+    line-height: 0;
+  }
+}
+
+.header-form-wrap {
+  margin-left: auto;
+
+  .gravatar,
+  .dropdown,
+  .post-intership-btn {
+    display: none;
+  }
+
+  .form-row {
+    padding: 1rem;
+  }
+
+  .search-btn {
+    color: $primary-color;
+    padding: 0;
+  }
+}
+
+.secondary-page {
+  .languages-links-wrap {
+    order: 0;
+  }
+}
+
 .announcements {
   margin: 1rem 2rem;
   font-size: $font-size-xs;
@@ -119,61 +178,115 @@ header {
   }
 }
 
-.navbar-header {
-  @include absolute-tl(1.5rem, 1rem);
-}
-
 @include media-breakpoint-up(sm) {
-  .navbar-header {
+  .navbar-left {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .navbar-right {
     display: none;
   }
 
+  .navbar-middle {
+    padding-left: 1rem;
+  }
+
+  .brands li,
+  .brands li:first-of-type {
+    display: inline;
+  }
+
+  .header-links-wrap,
   .header-links-wrap.collapse {
-    display: block;
+    display: flex;
+    position: initial;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    padding-right: 1rem;
+    order: 2;
+
+    .header-links {
+      display: flex;
+
+      li {
+        border: none;
+        padding: 0;
+
+        &.demo-link a,
+        &.team-link a {
+          color: $theme-gray;
+        }
+      }
+    }
   }
 
   .header-form-wrap {
+    order: 2;
+    display: flex;
+    padding-right: 1rem;
+    align-items: center;
+
+    .dropdown {
+      display: block;
+    }
+
+    .dropdown-toggle {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      color: $primary-color;
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        padding: 0.75rem 1.5rem;
+        border-top: 1px solid lighten($secondary-color, 45%);
+        color: $secondary-color;
+
+        &:last-of-type {
+          padding: 1.5rem;
+          border-top: 1px solid $secondary-color;
+          color: $primary-color;
+
+          &:hover {
+            background-color: $primary-color;
+            color: $white;
+          }
+        }
+      }
+    }
+
     .gravatar {
-      margin-left: 0.5rem;
+      @include border-radius(50%);
+
+      max-width: 2rem;
+      height: auto;
+      border: 1px solid $primary-color;
+      padding: 1px;
+      display: block;
     }
 
     .post-intership-btn {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
+      display: inline;
+      font-weight: 600;
+      padding: 0 0 0.5rem;
     }
   }
-}
 
-@include media-breakpoint-down(sm) {
-  .brands-wrap {
-    margin: 0 auto;
-  }
-
-  .navbar-brand {
-    margin-right: 0;
-  }
-
-  .brands li:not(:first-child) {
-    display: none;
-  }
-
-  .header-form-wrap {
-    .post-intership-btn {
-      margin-bottom: 0;
-    }
-  }
-}
-
-@include media-breakpoint-down(lg) {
-  header {
-    border-bottom: 2px solid #286bda;
-
-    .brands {
-      padding: 1rem;
+  .secondary-page {
+    .navbar-brand.goi {
+      display: none;
     }
 
-    .header-links .language-link {
-      margin-right: 0.5rem;
+    .header-links-wrap {
+      display: none;
+    }
+
+    .languages-links-wrap {
+      order: 3;
     }
   }
 }

@@ -7,6 +7,9 @@ p {
 }
 
 // z-index of all elements
+.header-links-wrap {
+  z-index: 1;
+}
 
 .search-wrap .related-actions {
   z-index: 3;

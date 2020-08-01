@@ -2,6 +2,8 @@ import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap';
 
+import Header from './header';
+
 $(document).ready(() => {
-  // init()
+  Header.init();
 });

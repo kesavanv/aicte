@@ -50,6 +50,15 @@ section {
   padding: 0;
 }
 
+.dropdown {
+  width: max-content;
+}
+
+.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
 @include media-breakpoint-down(sm) {
   table {
     thead {

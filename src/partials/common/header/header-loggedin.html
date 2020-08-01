@@ -1,30 +1,48 @@
-<header>
+<header class="secondary-page">
   <nav class="navbar navbar-light">
-    <div class="brands-wrap">
-      <ul class="brands">
-        <li><a class="navbar-brand aicte-internships" href="index.html"><span>AICTE Internships</span></a></li>
-        <li><a class="navbar-brand aicte" href="#"><span>All India Council for Technical Education</span></a></li>
-        <li><a class="navbar-brand mhrd" href="#"><span>MHRD</span></a></li>
-        <li><a class="navbar-brand goi" href="#"><span>Government of India</span></a></li>
+    ${require('./main-nav.html')}
+
+    <div id="main-menu" class="header-links-wrap collapse">
+      <ul class="header-links">
+        <li class="demo-link"><a href="#" class="btn btn-sm btn-link">Demo</a></li>
+        <li class="team-link"><a href="#" class="btn btn-sm btn-link">Our Team</a></li>
+        <li class="post-internship-link"><a href="#" class="btn btn-sm btn-link">Post Internship</a></li>
+        <li><a href="index.html" class="btn btn-sm btn-primary signup-link">Sign Out</a></li>
       </ul>
     </div>
 
+    ${require('./language-menu.html')}
+
     <div class="header-form-wrap">
       <button class="btn btn-link post-intership-btn">Post an Intership</button>
-      <img class="gravatar order-lg-1" src="../../../images/photos/photo8.jpg" alt="username">
+
       <form>
         <div class="form-row">
-          <div class="col-lg-6">
+          <div class="col-sm-6">
             <input type="text" class="form-control simple-input" placeholder="Civil Engineer, Designer etc.">
           </div>
-          <div class="col-9 col-lg-5">
+          <div class="col-10 col-sm-5">
             <input type="text" class="form-control simple-input" placeholder="Mumbai">
           </div>
-          <div class="col-2 col-lg-1">
+          <div class="col col-sm-1">
             <button class="btn search-btn"><i class="fas fa-search"></i></button>
           </div>
         </div>
       </form>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <img class="gravatar" src="../../../images/photos/photo8.jpg" alt="username">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Demo</a>
+          <a class="dropdown-item" href="#">Our Team</a>
+          <!-- <a class="dropdown-item" href="#">Post Internship</a> -->
+          <a class="dropdown-item" href="index.html">Sign Out</a>
+        </div>
+      </div>
     </div>
+
   </nav>
 </header>
