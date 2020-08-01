@@ -131,6 +131,17 @@ header {
   .header-links-wrap.collapse {
     display: block;
   }
+
+  .header-form-wrap {
+    .gravatar {
+      margin-left: 0.5rem;
+    }
+
+    .post-intership-btn {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {
@@ -146,8 +157,10 @@ header {
     display: none;
   }
 
-  .header-form-wrap .post-intership-btn {
-    margin-bottom: 0;
+  .header-form-wrap {
+    .post-intership-btn {
+      margin-bottom: 0;
+    }
   }
 }
 
