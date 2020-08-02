@@ -15,6 +15,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const RemovePlugin = require('remove-files-webpack-plugin');
 
 const config = require('./site.config');
 
@@ -80,6 +81,17 @@ const generateHTMLPlugins = () => glob.sync('./src/**/*.html').map((dir) => {
 
 // Beautify HTML
 const beautify = new HtmlBeautifyPlugin();
+
+// Remove Files
+const removeFiles = new RemovePlugin({
+  after: {
+    root: './dist',
+    include: [
+      'partials'
+    ],
+    trash: true
+  }
+});
 
 // Sitemap
 const sitemap = new SitemapPlugin(config.site_url, paths, {
@@ -162,6 +174,7 @@ module.exports = [
   // config.env === 'production' && robots,
   // config.env === 'production' && sitemap,
   // config.googleAnalyticsUA && google,
+  removeFiles,
   webpackBar,
   config.env === 'development' && hmr,
 ].filter(Boolean);
